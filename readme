@@ -1,0 +1,70 @@
+    '<ol>
+      <li>
+        <p>
+          <code>createTable(tableId, title, rows, search, sort)</code>: Bu
+          fonksiyon ile <code>tableId</code> parametresi ile belirtilen idye
+          sahip bir tablo oluşturulur. <code>title</code> parametresi ile
+          tabloya başlıklar verilir. <code>rows</code> parametresi ile tabloya
+          satırlar eklenir. <code>search</code> ve
+          <code>sort</code> parametreleri ile arama ve sıralama özellikleri
+          aktif veya pasif olarak belirlenir.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>addRow(tableId, cells)</code>: Bu fonksiyon ile
+          <code>tableId</code> parametresi ile belirtilen tabloya
+          <code>cells</code> parametresi ile verilen hücrelerdeki verilerle yeni
+          bir satır eklenir.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>deleteRow(tableId, rowIndex)</code>: Bu fonksiyon ile
+          <code>tableId</code> parametresi ile belirtilen tablodaki
+          <code>rowIndex</code> parametresi ile belirtilen satır silinir.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>getRowData(tableId, rowIndex)</code>: Bu fonksiyon ile
+          <code>tableId</code> parametresi ile belirtilen tablodaki
+          <code>rowIndex</code> parametresi ile belirtilen satırın verileri json
+          olarak döndürülür.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>getCellData(tableId, rowIndex, columnIndex)</code>: Bu fonksiyon
+          ile <code>tableId</code> parametresi ile belirtilen tablodaki
+          <code>rowIndex</code> ve <code>columnIndex</code> parametreleri ile
+          belirtilen satır ve hücrenin içerisindeki veri döndürülür.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>setCellData(tableId, rowIndex, columnIndex, newData)</code>: Bu
+          fonksiyon ile <code>tableId</code> parametresi ile belirtilen
+          tablodaki <code>rowIndex</code> ve <code>columnIndex</code>
+        </p>
+      </li>
+    </ol>
+
+
+
+    // Örnek kullanım
+createTable("tablo1", {title:["Başlık 1", "Başlık 2", "Başlık 3"], rows:[[1,2,3],[4,5,6]], search: true, sortArrow: true});
+// Örnek kullanım
+addRow("tablo1", [7,8,9]);
+// Örnek kullanım
+deleteRow("tablo1", 2);
+// Örnek kullanım
+console.log(getRowData("tablo1", 1));
+// Örnek kullanım
+console.log(getCellData("tablo1", 1, 2));
+// Örnek kullanım
+setCellData("tablo1", 1, 2, "yeni veri");
+
+
+
+'

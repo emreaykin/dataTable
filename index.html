@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <style>
+        /* Tablo için gerekli stil tanımlamaları */
+        table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+
+      <table id="myTable"></table>
+
+    
+    
+
+
+
+    <script src="dataTable.js"></script>
+    <script>
+    createTable("myTable", {title: ["Name", "Age", "City"], rows: [["John", "25", "New York"],["Emre", "23", "İstanbul"], ["Emily", "32", "San Francisco"]], search: true, sortArrow: true});
+    </script>
+  </body>
+</html>

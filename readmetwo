@@ -1,0 +1,43 @@
+
+# createTable(tableId, title, rows, search, sort)
+
+Bu fonksiyon ile 'tableId'  parametresi ile belirtilen idye sahip bir tablo oluşturulur.'title' parametresi ile
+tabloya başlıklar verilir 'rows' parametresi ile tabloya satırlar eklenir. 'search' ve 'sort'  parametreleri ile arama ve sıralama özellikleri
+aktif veya pasif olarak belirlenir.
+
+- createTable("tablo1", {title:["Başlık 1", "Başlık 2", "Başlık 3"], rows:[[1,2,3],[4,5,6]], search: true, sortArrow: true});
+
+# addRow(tableId, cells)
+
+Bu fonksiyon ile 'tableId' parametresi ile belirtilen tabloya 'cells' parametresi ile verilen hücrelerdeki verilerle yeni
+bir satır eklenir.
+
+- addRow("tablo1", [7,8,9]);
+
+# deleteRow(tableId, rowIndex)
+
+Bu fonksiyon ile 'tableId' parametresi ile belirtilen tablodaki 'rowIndex' parametresi ile belirtilen satır silinir.
+
+deleteRow("tablo1", 2);
+
+# getRowData(tableId, rowIndex)
+
+Bu fonksiyon ile 'tableId' parametresi ile belirtilen tablodaki 'rowIndex' parametresi ile belirtilen satırın verileri json
+olarak döndürülür.
+
+-console.log(getRowData("tablo1", 1));
+
+# getCellData(tableId, rowIndex, columnIndex)
+
+Bu fonksiyon ile 'tableId' parametresi ile belirtilen tablodaki 'rowIndex' ve 'columnIndex' parametreleri ile
+belirtilen satır ve hücrenin içerisindeki veri döndürülür.
+
+
+-console.log(getCellData("tablo1", 1, 2));
+
+# setCellData(tableId, rowIndex, columnIndex, newData)
+
+Bu fonksiyon ile 'tableId' parametresi ile belirtilen tablodaki 'rowIndex'  ve 'columnIndex'
+
+
+-setCellData("tablo1", 1, 2, "yeni veri");
